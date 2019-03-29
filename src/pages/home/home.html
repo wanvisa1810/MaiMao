@@ -7,10 +7,9 @@
 <ion-content padding>
   <ion-list>
     <ion-item *ngFor="let p of customer">
-      <h2>{{p.customerID}}</h2>
-      <p>{{p.customerName}}</p>
+      <h2>{{p.customerName}}</h2>
       <p>{{p.customerMail}}</p>
-      <button ion-button clear item-end>View</button>
+      <button ion-button clear item-end (click)="showDetail(p.customerID)">View</button>
     </ion-item>
   </ion-list>
 </ion-content>
