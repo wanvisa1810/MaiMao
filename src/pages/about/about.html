@@ -1,11 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      ค้นหาลูกค้า
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
+      <ion-label>
+        กรอกข้อมูลที่ต้องการค้นหา
+      </ion-label> 
+      <ion-input [(ngModel)]="keyword" name="keyword"></ion-input>
+
+  <button ion-button block>
+  <ion-icon name="search"></ion-icon>ค้นหา
+  </button>
 </ion-content>
