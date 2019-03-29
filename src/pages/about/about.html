@@ -7,13 +7,13 @@
 </ion-header>
 
 <ion-content padding>
-
+  <form (ngSubmit)="findCustomer()">
       <ion-label>
-        กรอกข้อมูลที่ต้องการค้นหา
-      </ion-label> 
-      <ion-input [(ngModel)]="keyword" name="keyword"></ion-input>
-
-  <button ion-button block>
-  <ion-icon name="search"></ion-icon>ค้นหา
-  </button>
+          กรอกข้อมูลที่ต้องการค้นหา
+        </ion-label> 
+        <ion-input name="keyword" [(ngModel)]="data.keyword" ></ion-input>
+        <button ion-button block type="submit">
+    <ion-icon name="search"></ion-icon>ค้นหา
+    </button>
+  </form>      
 </ion-content>

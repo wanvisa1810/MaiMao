@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { DetailPage } from '../detail/detail';
+import { ResultPage } from '../result/result';
 
 import{ Http } from '@angular/http';
 import 'rxjs/add/operator/map';
