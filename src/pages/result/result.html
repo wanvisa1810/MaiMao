@@ -11,5 +11,10 @@
 </ion-header>
 
 <ion-content padding>
-
+<ion-list>
+  <ion-item *ngFor="let p of customer">
+    <p>{{p.customerName}}</p>
+    <button ion-button clear item-end (click)="showDetail(p.customerID)">view</button>
+  </ion-item>
+</ion-list>
 </ion-content>
