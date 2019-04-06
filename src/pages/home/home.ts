@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { DetailPage } from '../detail/detail';
 import { ResultPage } from '../result/result';
+import { NewcustomerPage } from '../newcustomer/newcustomer';
 
 import{ Http } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -25,5 +26,8 @@ export class HomePage {
   showDetail(id){
     this.navCtrl.push(DetailPage,{customerID: id});
 
+  }
+  showNewcustomer(){
+    this.navCtrl.push(NewcustomerPage);
   }
 }

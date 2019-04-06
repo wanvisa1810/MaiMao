@@ -1,6 +1,8 @@
 {
   "name": "MaiMao",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular",
   "id": "c8389c79"
 }
