@@ -43,7 +43,7 @@ export class HomePage {
         { 
           text: "Yes",
           handler:()=>{
-            let url ="http://localhost:8080/custoner/"+customerID;
+            let url ="http://localhost:8080/customer/"+customerID;
             this.http.delete(url)
               .subscribe(res=>{
                 this.data=res;
@@ -61,9 +61,6 @@ export class HomePage {
     })
       .present();
    
-  }
-  editCustomer(customerID){
-
   }
   showAlert(msgTitle:string, message:string){
     const alert = this.alertCtrl.create({
