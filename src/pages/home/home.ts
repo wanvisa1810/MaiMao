@@ -4,6 +4,7 @@ import { DetailPage } from '../detail/detail';
 import { NewcustomerPage} from '../newcustomer/newcustomer';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
+import { EditcustomerPage } from '../editcustomer/editcustomer';
 
 @Component({
   selector: 'page-home',
@@ -18,6 +19,10 @@ export class HomePage {
   showDetail(id)
   {
     this.navCtrl.push(DetailPage,{customerID :id});
+  }
+  editcustomer(id)
+  {
+    this.navCtrl.push(EditcustomerPage,{customerID :id});
   }
   showNewcustomer()
   {
@@ -38,7 +43,7 @@ export class HomePage {
         { 
           text: "Yes",
           handler:()=>{
-            let url ="http://localhost:8080/customer/"+customerID;
+            let url ="http://localhost:8080/custoner/"+customerID;
             this.http.delete(url)
               .subscribe(res=>{
                 this.data=res;
@@ -57,8 +62,7 @@ export class HomePage {
       .present();
    
   }
-
-  editData(customerID){
+  editCustomer(customerID){
 
   }
   showAlert(msgTitle:string, message:string){
