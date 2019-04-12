@@ -13,19 +13,24 @@
 <ion-content padding>
   <form (ngSubmit)="addCustomer()">
     <ion-list>
+        <ion-item>
+            <ion-label floating>รหัสลูกค้า</ion-label>
+            <ion-input type="text" name="customerID" [(ngModel)]="customer.customerID"></ion-input>
+          </ion-item>
+
       <ion-item>
         <ion-label floating>ชื่อลูกค้า</ion-label>
-        <ion-input type="text" customerName="customerName" (ngModel)="customer.customerName"></ion-input>
+        <ion-input type="text" name="customerName" [(ngModel)]="customer.customerName"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label floating>เบอร์โทร</ion-label>
-        <ion-input type="text" customerName="customerName" (ngModel)="customer.customerName"></ion-input>
+        <ion-input type="text" name="customerTel" [(ngModel)]="customer.customerTel"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label floating>อีเมล์</ion-label>
-        <ion-input type="text" customerName="customerName" (ngModel)="customer.customerName"></ion-input>
+        <ion-input type="text" name="customerMail" [(ngModel)]="customer.customerMail"></ion-input>
       </ion-item>
         <button ion-button block>SAVE</button>
     </ion-list>
