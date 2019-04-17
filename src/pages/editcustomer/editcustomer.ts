@@ -27,7 +27,7 @@ export class EditcustomerPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http,
     private alertCtrl: AlertController,private httpclient: HttpClient) {
     let customerID=this.navParams.get('customerID');
-    let url = "http://localhost:8080/customers/" + customerID;
+    let url = "http://localhost:8080/customer/" + customerID;
     console.log(url);
     this.http.get(url)
     .map(res=>res.json())

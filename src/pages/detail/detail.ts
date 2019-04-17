@@ -19,7 +19,7 @@ export class DetailPage {
   customer:any=0;
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
     let customerID=this.navParams.get('customerID');
-    let url = "http://localhost:8080/customers/" + customerID;
+    let url = "http://localhost:8080/customer/" + customerID;
     console.log(url);
     this.http.get(url)
     .map(res=>res.json())
